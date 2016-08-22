@@ -49,7 +49,16 @@
 }
 
 - (void)testButton {
+    UIButton *testButton = [[UIButton alloc] init];
+    [testButton addTarget:self action:@selector(handleButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     
+    [testButton addButtonCallback:^(UIButton *sender) {
+        NSLog(@"handleButtonTapped");
+    }];
+}
+
+- (void)handleButtonTapped:(UIButton *)sender {
+    NSLog(@"handleButtonTapped");
 }
 
 - (void)testBarButtonItem {

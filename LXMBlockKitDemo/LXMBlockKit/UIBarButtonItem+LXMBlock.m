@@ -24,6 +24,7 @@
     UIBarButtonItem *item = nil;
     item = [[UIBarButtonItem alloc] initWithImage:image style:style target:item action:@selector(handleLXMBarButtonItemCallback:)];
     item.itemCallback = callback;
+    item.target = item;//如果没有这一句，item的target其实是nil，有时候依然可以正常调用selector，貌似是因为响应链的传递；但有时候又不能正常调用（viewController不是firstResponese的时候）；所以统一加这么一句修复下
     return item;
     
 //    UIBarButtonItem *item = [[UIBarButtonItem alloc] init];
@@ -39,6 +40,7 @@
     UIBarButtonItem *item = nil;
     item = [[UIBarButtonItem alloc] initWithImage:image landscapeImagePhone:landscapeImagePhone style:style target:item action:@selector(handleLXMBarButtonItemCallback:)];
     item.itemCallback = callback;
+    item.target = item;//如果没有这一句，item的target其实是nil，有时候依然可以正常调用selector，貌似是因为响应链的传递；但有时候又不能正常调用（viewController不是firstResponese的时候）；所以统一加这么一句修复下
     return item;
     
 //    UIBarButtonItem *item = [[UIBarButtonItem alloc] init];
@@ -55,9 +57,10 @@
     UIBarButtonItem *item = nil;
     item = [[UIBarButtonItem alloc] initWithTitle:title style:style target:item action:@selector(handleLXMBarButtonItemCallback:)];
     item.itemCallback = callback;
+    item.target = item;//如果没有这一句，item的target其实是nil，有时候依然可以正常调用selector，貌似是因为响应链的传递；但有时候又不能正常调用（viewController不是firstResponese的时候）；所以统一加这么一句修复下
     return item;
     
-//    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:title style:style target:item action:@selector(handleLXMBarButtonItemCallback:)];
+//    UIBarButtonItem *item = [[UIBarButtonItem alloc] init];
 //    item.title = title;
 //    item.style = style;
 //    item.target = item;
@@ -70,6 +73,7 @@
     UIBarButtonItem *item = nil;//[[UIBarButtonItem alloc] init];
     item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:systemItem target:item action:@selector(handleLXMBarButtonItemCallback:)];
     item.itemCallback = callback;
+    item.target = item;//如果没有这一句，item的target其实是nil，有时候依然可以正常调用selector，貌似是因为响应链的传递；但有时候又不能正常调用（viewController不是firstResponese的时候）；所以统一加这么一句修复下
     return item;
 }
 
