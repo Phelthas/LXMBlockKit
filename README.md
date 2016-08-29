@@ -38,9 +38,12 @@ block回调中，务必使用weakSelf！直接使用self必定会导致循环引
 ##How to use
 1, cocoaPods    
 在你的podfile中添加    
-`pod 'LXMBlockKit', '~> 0.0.2'`    
+`pod 'LXMBlockKit', '~> 0.0.3'`    
 run `pod install` or `pod update`   
 然后在需要的地方 `#import "LXMBlockKit.h"`就可以了
+
+##Update
+0.0.3   修复target为nil的bug
 
 ##License
 LXMBlockKit is provided under the MIT license. See LICENSE file for details.
