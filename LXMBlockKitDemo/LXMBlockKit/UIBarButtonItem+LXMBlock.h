@@ -14,6 +14,13 @@ typedef void(^LXMBarButtonItemCallback)(UIBarButtonItem *sender);
 
 @property (nonatomic, copy, readonly) LXMBarButtonItemCallback itemCallback;
 
++ (instancetype)itemWithImage:(UIImage *)image callback:(LXMBarButtonItemCallback)callback;
+
++ (instancetype)itemWithImage:(UIImage *)image landscapeImagePhone:(UIImage *)landscapeImagePhone callback:(LXMBarButtonItemCallback)callback;
+
++ (instancetype)itemWithTitle:(NSString *)title callback:(LXMBarButtonItemCallback)callback;
+
+
 + (instancetype)itemWithImage:(UIImage *)image style:(UIBarButtonItemStyle)style callback:(LXMBarButtonItemCallback)callback;
 
 + (instancetype)itemWithImage:(UIImage *)image landscapeImagePhone:(UIImage *)landscapeImagePhone style:(UIBarButtonItemStyle)style callback:(LXMBarButtonItemCallback)callback;

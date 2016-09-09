@@ -67,19 +67,19 @@
     UIImage *testImage = [UIImage imageNamed:@"nav_setting"];
     
     
-    UIBarButtonItem *oneItem = [UIBarButtonItem itemWithImage:testImage style:UIBarButtonItemStylePlain callback:^(UIBarButtonItem *sender) {
+    UIBarButtonItem *oneItem = [UIBarButtonItem itemWithImage:testImage callback:^(UIBarButtonItem *sender) {
 //        ViewController *testViewController = [[ViewController alloc] init];
 //        [weakSelf.navigationController pushViewController:testViewController animated:YES];
         [weakSelf logDefault];
     }];
     
-    UIBarButtonItem *twoItem = [UIBarButtonItem itemWithImage:testImage landscapeImagePhone:testImage style:UIBarButtonItemStylePlain callback:^(UIBarButtonItem *sender) {
+    UIBarButtonItem *twoItem = [UIBarButtonItem itemWithImage:testImage landscapeImagePhone:testImage callback:^(UIBarButtonItem *sender) {
         ViewController *testViewController = [[ViewController alloc] init];
         [weakSelf.navigationController pushViewController:testViewController animated:YES];
         [weakSelf logDefault];
     }];
     
-    UIBarButtonItem *threeItem = [UIBarButtonItem itemWithTitle:@"third" style:UIBarButtonItemStylePlain callback:^(UIBarButtonItem *sender) {
+    UIBarButtonItem *threeItem = [UIBarButtonItem itemWithTitle:@"third" callback:^(UIBarButtonItem *sender) {
         ViewController *testViewController = [[ViewController alloc] init];
         [weakSelf.navigationController pushViewController:testViewController animated:YES];
         [weakSelf logDefault];
