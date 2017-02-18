@@ -108,6 +108,7 @@
         NSLog(@"it is %@", NSStringFromCGPoint([sender locationInView:weakSelf.view]));
     }];
     [self.view addGestureRecognizer:panGesture];
+
     
 }
 

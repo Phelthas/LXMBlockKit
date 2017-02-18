@@ -17,21 +17,21 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void(^LXMNotificationCallback)(NSNotification *sender);
+typedef void(^LXMNotificationCallback)(NSNotification * _Nullable sender);
 
 @interface NSNotificationCenter (LXMBlock)
 
-- (void)addObserver:(id)observer name:(NSString *)name callback:(LXMNotificationCallback)callback;
+- (void)addObserver:(nonnull id)observer name:(nullable NSString *)name callback:(nonnull LXMNotificationCallback)callback;
 
-- (void)addObserver:(id)observer name:(NSString *)name object:(id)object callback:(LXMNotificationCallback)callback;
+- (void)addObserver:(nonnull id)observer name:(nullable NSString *)name object:(nullable id)object callback:(nonnull LXMNotificationCallback)callback;
 
-- (void)addObserver:(id)observer name:(NSString *)name object:(id)object queue:(NSOperationQueue *)queue callback:(LXMNotificationCallback)callback;
+- (void)addObserver:(nonnull id)observer name:(nullable NSString *)name object:(nullable id)object queue:(nullable NSOperationQueue *)queue callback:(nonnull LXMNotificationCallback)callback;
 
 
 /**
  *  用上面的方法添加的observer，只能用此方法删除，否则就只会在Observer销毁的时候才会跟着dealloc;
  */
-- (void)lxm_removeObserver:(id)observer name:(NSString *)name object:(id)object;
+- (void)lxm_removeObserver:(nonnull id)observer name:(nullable NSString *)name object:(nullable id)object;
 
 
 @end

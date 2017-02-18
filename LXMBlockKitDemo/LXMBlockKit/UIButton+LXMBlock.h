@@ -9,14 +9,14 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^LXMButtonCallback)(UIButton *sender);
+typedef void(^LXMButtonCallback)(UIButton * _Nullable sender);
 
 @interface UIButton (LXMBlock)
 
-@property (nonatomic, copy, readonly) LXMButtonCallback buttonCallback;
+@property (nonatomic, copy, readonly, nullable) LXMButtonCallback buttonCallback;
 
-- (void)addButtonCallback:(LXMButtonCallback)callback;
+- (void)addButtonCallback:(nonnull LXMButtonCallback)callback;
 
-- (void)addButtonCallback:(LXMButtonCallback)callback forControlEvents:(UIControlEvents)controlEvents;
+- (void)addButtonCallback:(nonnull LXMButtonCallback)callback forControlEvents:(UIControlEvents)controlEvents;
 
 @end

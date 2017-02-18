@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^LXMGestureCallback)(id sender);
+typedef void(^LXMGestureCallback)(id _Nullable sender);
 
 @interface UIGestureRecognizer (LXMBlock)
 
-@property (nonatomic, copy, readonly) LXMGestureCallback gestureCallback;
+@property (nonatomic, copy, readonly, nullable) LXMGestureCallback gestureCallback;
 
-- (instancetype)initWithCallback:(LXMGestureCallback)callback;
+- (nonnull instancetype)initWithCallback:(nonnull LXMGestureCallback)callback;
 
 @end
+
