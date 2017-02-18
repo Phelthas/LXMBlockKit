@@ -43,8 +43,8 @@ run `pod install` or `pod update`
 然后在需要的地方 `#import "LXMBlockKit.h"`就可以了
 
 ##Update
-0.0.5   加入nullable和nonnull等字段，方便swift调用     
-0.0.4   更新UIBarButtonItem方法     
+0.0.5   加入nullable和nonnull等字段，方便swift调用         
+0.0.4   更新UIBarButtonItem方法    
 0.0.3   修复target为nil的bug
 
 ##License
