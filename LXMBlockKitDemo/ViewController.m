@@ -20,13 +20,18 @@
 
 @property (nonatomic, strong) NSOperationQueue *testQueue;
 
+@property (nonatomic, strong) NSTimer *testTimer;
+
 
 @end
 
 @implementation ViewController
 
 - (void)dealloc {
+    
     NSLog(@"it is dealloc %@", self);
+    [self.testTimer invalidate];
+    self.testTimer = nil;
 }
 
 - (void)viewDidLoad {
@@ -40,6 +45,8 @@
     [self testGesture];
     
     [self testNotification];
+    
+    [self testBlockTimer];
    
 }
 
@@ -138,6 +145,17 @@
 //        // 打印成员变量名字
 //        NSLog(@"%s------%s", ivar_getName(ivar),ivar_getTypeEncoding(ivar2));
 //    }
+}
+
+- (void)testBlockTimer {
+    
+    __weak typeof(self) weakSelf = self;
+    
+    self.testTimer = [NSTimer lxm_scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nullable sender) {
+         [weakSelf logDefault];
+    }];
+    
+    [[NSRunLoop mainRunLoop] addTimer:self.testTimer forMode:NSRunLoopCommonModes];
 }
 
 #pragma mark - tool

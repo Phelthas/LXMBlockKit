@@ -22,7 +22,7 @@
 #import "UIBarButtonItem+LXMBlock.h"
 #import "UIGestureRecognizer+LXMBlock.h"
 #import "NSNotificationCenter+LXMBlock.h"
-
+#import "NSTimer+LXMBlock.h"
 
 
 

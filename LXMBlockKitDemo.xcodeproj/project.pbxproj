@@ -16,6 +16,7 @@
 		437416F51D19355F00D7212F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 437416F31D19355F00D7212F /* LaunchScreen.storyboard */; };
 		437417001D1935B600D7212F /* UIButton+LXMBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 437416FF1D1935B600D7212F /* UIButton+LXMBlock.m */; };
 		437417031D1938A400D7212F /* UIBarButtonItem+LXMBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 437417021D1938A400D7212F /* UIBarButtonItem+LXMBlock.m */; };
+		43961B0A1EEA8FD900899FA7 /* NSTimer+LXMBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 43961B091EEA8FD900899FA7 /* NSTimer+LXMBlock.m */; };
 		43BA59781E55532000B5F24B /* TestSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BA59771E55532000B5F24B /* TestSwiftViewController.swift */; };
 		43D3D37B1D4F569D00EA9233 /* NSNotificationCenter+LXMBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D3D37A1D4F569D00EA9233 /* NSNotificationCenter+LXMBlock.m */; };
 		F6724BD21D27EEAA00238FAE /* UIGestureRecognizer+LXMBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F6724BD11D27EEAA00238FAE /* UIGestureRecognizer+LXMBlock.m */; };
@@ -38,6 +39,8 @@
 		437416FF1D1935B600D7212F /* UIButton+LXMBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+LXMBlock.m"; sourceTree = "<group>"; };
 		437417011D1938A400D7212F /* UIBarButtonItem+LXMBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+LXMBlock.h"; sourceTree = "<group>"; };
 		437417021D1938A400D7212F /* UIBarButtonItem+LXMBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+LXMBlock.m"; sourceTree = "<group>"; };
+		43961B081EEA8FD900899FA7 /* NSTimer+LXMBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+LXMBlock.h"; sourceTree = "<group>"; };
+		43961B091EEA8FD900899FA7 /* NSTimer+LXMBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+LXMBlock.m"; sourceTree = "<group>"; };
 		43BA59761E55532000B5F24B /* LXMBlockKitDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LXMBlockKitDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		43BA59771E55532000B5F24B /* TestSwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSwiftViewController.swift; sourceTree = "<group>"; };
 		43D3D3791D4F569D00EA9233 /* NSNotificationCenter+LXMBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+LXMBlock.h"; sourceTree = "<group>"; };
@@ -113,6 +116,8 @@
 				F6724BD11D27EEAA00238FAE /* UIGestureRecognizer+LXMBlock.m */,
 				43D3D3791D4F569D00EA9233 /* NSNotificationCenter+LXMBlock.h */,
 				43D3D37A1D4F569D00EA9233 /* NSNotificationCenter+LXMBlock.m */,
+				43961B081EEA8FD900899FA7 /* NSTimer+LXMBlock.h */,
+				43961B091EEA8FD900899FA7 /* NSTimer+LXMBlock.m */,
 			);
 			path = LXMBlockKit;
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 				437416ED1D19355F00D7212F /* ViewController.m in Sources */,
 				43BA59781E55532000B5F24B /* TestSwiftViewController.swift in Sources */,
 				437416EA1D19355F00D7212F /* AppDelegate.m in Sources */,
+				43961B0A1EEA8FD900899FA7 /* NSTimer+LXMBlock.m in Sources */,
 				437416E71D19355F00D7212F /* main.m in Sources */,
 				437417001D1935B600D7212F /* UIButton+LXMBlock.m in Sources */,
 			);
