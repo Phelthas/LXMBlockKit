@@ -35,7 +35,7 @@ block回调中，务必使用weakSelf！直接使用self必定会导致循环引
 有什么问题，欢迎讨论~
 
 
-##How to use    
+## How to use    
 
 1, cocoaPods    
 在你的podfile中添加    
@@ -43,14 +43,14 @@ block回调中，务必使用weakSelf！直接使用self必定会导致循环引
 run `pod install` or `pod update`   
 然后在需要的地方 `#import "LXMBlockKit.h"`就可以了
 
-##Update    
+## Update    
 
 0.0.6   加入NSTimer的block方法    
 0.0.5   加入nullable和nonnull等字段，方便swift调用    
 0.0.4   更新UIBarButtonItem方法    
 0.0.3   修复target为nil的bug
 
-##License
+## License
 LXMBlockKit is provided under the MIT license. See LICENSE file for details.
 
 
