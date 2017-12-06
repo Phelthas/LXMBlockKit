@@ -103,13 +103,12 @@
 
 - (void)testGesture {
     __weak typeof(self) weakSelf = self;
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithCallback:^(UITapGestureRecognizer *sender) {
+    [self.view addTapGestureWithCallback:^(UITapGestureRecognizer * _Nullable sender) {
         [weakSelf logDefault];
         ViewController *testViewController = [[ViewController alloc] init];
         [weakSelf.navigationController pushViewController:testViewController animated:YES];
-        
     }];
-    [self.view addGestureRecognizer:tapGesture];
+    
  
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithCallback:^(UIPanGestureRecognizer *sender) {
         NSLog(@"it is %@", NSStringFromCGPoint([sender locationInView:weakSelf.view]));

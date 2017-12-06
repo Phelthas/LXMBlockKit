@@ -48,4 +48,15 @@
 
 
 
+@implementation UIView (LXMTapGesture)
+
+- (UITapGestureRecognizer *)addTapGestureWithCallback:(LXMTapGestureCallback)callback {
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithCallback:callback];
+    self.userInteractionEnabled = YES;
+    [self addGestureRecognizer:tapGesture];
+    return tapGesture;
+}
+
+
+@end
 

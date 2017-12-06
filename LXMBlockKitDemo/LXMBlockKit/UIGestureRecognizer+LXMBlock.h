@@ -18,3 +18,13 @@ typedef void(^LXMGestureCallback)(id _Nullable sender);
 
 @end
 
+
+
+
+typedef void(^LXMTapGestureCallback)(UITapGestureRecognizer * _Nullable sender);
+
+@interface UIView (LXMTapGesture)
+
+- (nonnull UITapGestureRecognizer *)addTapGestureWithCallback:(nonnull LXMTapGestureCallback)callback;
+
+@end
