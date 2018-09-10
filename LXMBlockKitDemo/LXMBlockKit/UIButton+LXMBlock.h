@@ -15,6 +15,10 @@ typedef void(^LXMButtonCallback)(UIButton * _Nullable sender);
 
 @property (nonatomic, copy, readonly, nullable) LXMButtonCallback buttonCallback;
 
+
+/**
+ 默认的是事件是UIControlEventTouchUpInside
+ */
 - (void)addButtonCallback:(nonnull LXMButtonCallback)callback;
 
 - (void)addButtonCallback:(nonnull LXMButtonCallback)callback forControlEvents:(UIControlEvents)controlEvents;
@@ -28,6 +32,10 @@ typedef void(^LXMControlCallback)(UIControl * _Nullable sender);
 
 @property (nonatomic, copy, readonly, nullable) LXMControlCallback controlCallback;
 
+
+/**
+ 默认的是事件是UIControlEventValueChanged
+ */
 - (void)addControlCallback:(nonnull LXMControlCallback)callback;
 
 - (void)addControlCallback:(nonnull LXMControlCallback)callback forControlEvents:(UIControlEvents)controlEvents;
