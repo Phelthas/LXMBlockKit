@@ -36,8 +36,8 @@ typedef void(^LXMControlCallback)(UIControl * _Nullable sender);
 /**
  默认的是事件是UIControlEventValueChanged
  */
-- (void)addUIControlCallback:(nonnull LXMControlCallback)callback;
+- (void)addSimpleCallback:(nonnull LXMControlCallback)callback;
 
-- (void)addUIControlCallback:(nonnull LXMControlCallback)callback forControlEvents:(UIControlEvents)controlEvents;
+- (void)addSimpleCallback:(nonnull LXMControlCallback)callback forControlEvents:(UIControlEvents)controlEvents;
 
 @end
