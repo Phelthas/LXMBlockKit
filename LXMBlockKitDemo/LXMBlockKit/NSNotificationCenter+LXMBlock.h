@@ -12,7 +12,9 @@
  *  这里基本只是按自己的代码习惯重新敲了一遍，用到NSOperationQueue的方法还没有自己实际验证过，有用到再说~
  */
 
-
+#ifndef kNSNotificationCenter
+#define kNSNotificationCenter    [NSNotificationCenter defaultCenter]
+#endif
 
 
 #import <Foundation/Foundation.h>

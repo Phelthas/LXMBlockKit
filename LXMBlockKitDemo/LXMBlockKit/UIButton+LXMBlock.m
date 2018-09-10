@@ -53,3 +53,50 @@
 
 
 @end
+
+
+
+@interface UIControl ()
+
+@property (nonatomic, copy, readwrite) LXMControlCallback controlCallback;
+
+@end
+
+
+@implementation UIControl (LXMBlock)
+
+#pragma mark - Public
+
+- (void)addControlCallback:(LXMControlCallback)callback {
+    [self addControlCallback:callback forControlEvents:UIControlEventValueChanged];
+}
+
+- (void)addControlCallback:(LXMControlCallback)callback forControlEvents:(UIControlEvents)controlEvents {
+    [self addTarget:self action:@selector(handleLXMControlCallback:) forControlEvents:controlEvents];
+    self.controlCallback = callback;
+}
+
+
+#pragma mark - Action
+
+- (void)handleLXMControlCallback:(UIControl *)sender {
+    if (self.controlCallback) {
+        self.controlCallback(sender);
+    }
+}
+
+
+#pragma mark - Property
+
+- (LXMControlCallback)controlCallback {
+    return objc_getAssociatedObject(self, @selector(controlCallback));
+}
+
+- (void)setControlCallback:(LXMControlCallback)controlCallback {
+    objc_setAssociatedObject(self, @selector(controlCallback), controlCallback, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+
+
+@end
+

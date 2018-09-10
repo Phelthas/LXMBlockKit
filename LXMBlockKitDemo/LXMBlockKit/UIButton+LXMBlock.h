@@ -20,3 +20,16 @@ typedef void(^LXMButtonCallback)(UIButton * _Nullable sender);
 - (void)addButtonCallback:(nonnull LXMButtonCallback)callback forControlEvents:(UIControlEvents)controlEvents;
 
 @end
+
+
+typedef void(^LXMControlCallback)(UIControl * _Nullable sender);
+
+@interface UIControl (LXMBlock)
+
+@property (nonatomic, copy, readonly, nullable) LXMControlCallback controlCallback;
+
+- (void)addControlCallback:(nonnull LXMControlCallback)callback;
+
+- (void)addControlCallback:(nonnull LXMControlCallback)callback forControlEvents:(UIControlEvents)controlEvents;
+
+@end
