@@ -67,11 +67,11 @@
 
 #pragma mark - Public
 
-- (void)addControlCallback:(LXMControlCallback)callback {
-    [self addControlCallback:callback forControlEvents:UIControlEventValueChanged];
+- (void)addUIControlCallback:(LXMControlCallback)callback {
+    [self addUIControlCallback:callback forControlEvents:UIControlEventValueChanged];
 }
 
-- (void)addControlCallback:(LXMControlCallback)callback forControlEvents:(UIControlEvents)controlEvents {
+- (void)addUIControlCallback:(LXMControlCallback)callback forControlEvents:(UIControlEvents)controlEvents {
     [self addTarget:self action:@selector(handleLXMControlCallback:) forControlEvents:controlEvents];
     self.controlCallback = callback;
 }
