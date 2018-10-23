@@ -33,11 +33,11 @@ typedef void(^LXMNotificationCallback)(NSNotification * _Nullable sender);
 /**
  批量观察方法，当有好几个通知对应同一个block回调时，可以用这个方法来简化代码
  */
-- (void)addObserver:(id)observer nameArray:(NSArray<NSString *> *)nameArray callback:(LXMNotificationCallback)callback;
+- (void)addObserver:(nonnull id)observer nameArray:(nullable NSArray<NSString *> *)nameArray callback:(nonnull LXMNotificationCallback)callback;
 
-- (void)addObserver:(id)observer nameArray:(NSArray<NSString *> *)nameArray object:(id)object callback:(LXMNotificationCallback)callback;
+- (void)addObserver:(nonnull id)observer nameArray:(nullable NSArray<NSString *> *)nameArray object:(nullable id)object callback:(nonnull LXMNotificationCallback)callback;
 
-- (void)addObserver:(id)observer nameArray:(NSArray<NSString *> *)nameArray object:(id)object queue:(NSOperationQueue *)queue callback:(LXMNotificationCallback)callback;
+- (void)addObserver:(nonnull id)observer nameArray:(nullable NSArray<NSString *> *)nameArray object:(nullable id)object queue:(nullable NSOperationQueue *)queue callback:(nonnull LXMNotificationCallback)callback;
 
 /**
  *  用上面的方法添加的observer，只能用此方法删除，否则就只会在Observer销毁的时候才会跟着dealloc;
@@ -48,6 +48,6 @@ typedef void(^LXMNotificationCallback)(NSNotification * _Nullable sender);
 /**
  主动删除observer观察的所有对象
  */
-- (void)lxm_removeObserver:(id)observer;
+- (void)lxm_removeObserver:(nonnull id)observer;
 
 @end
