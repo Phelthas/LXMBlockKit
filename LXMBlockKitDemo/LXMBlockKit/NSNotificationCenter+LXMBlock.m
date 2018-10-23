@@ -92,6 +92,23 @@ static NSMutableArray *LXMNotificationObserverArray(id object) {
 }
 
 
+- (void)addObserver:(id)observer nameArray:(NSArray<NSString *> *)nameArray callback:(LXMNotificationCallback)callback {
+    [self addObserver:observer nameArray:nameArray object:nil callback:callback];
+}
+
+- (void)addObserver:(id)observer nameArray:(NSArray<NSString *> *)nameArray object:(id)object callback:(LXMNotificationCallback)callback {
+    [self addObserver:observer nameArray:nameArray object:object queue:nil callback:callback];
+}
+
+- (void)addObserver:(id)observer nameArray:(NSArray<NSString *> *)nameArray object:(id)object queue:(NSOperationQueue *)queue callback:(LXMNotificationCallback)callback {
+    for (NSString *name in nameArray) {
+        [self addObserver:observer name:name object:object queue:queue callback:callback];
+    }
+}
+
+
+
+
 - (void)lxm_removeObserver:(id)observer name:(NSString *)name object:(id)object {
     for (LXMNotificationObserver *target in [LXMNotificationObserverArray(observer) reverseObjectEnumerator]) {
         if ((!name || [target.notificationName isEqualToString:name]) &&
@@ -99,6 +116,10 @@ static NSMutableArray *LXMNotificationObserverArray(id object) {
             [LXMNotificationObserverArray(observer) removeObject:target];
         }
     }
+}
+
+- (void)lxm_removeObserver:(id)observer {
+    [LXMNotificationObserverArray(observer) removeAllObjects];
 }
 
 @end
