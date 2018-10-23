@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LXMBlockKit"
-  s.version      = "0.0.7"
+  s.version      = "0.0.8"
   s.summary      = "LXMBlockKit"
   s.description  = <<-DESC
 		Some category adding block API for UIKit
